@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import classes from './Header.module.scss';
-import { AppRoutes } from 'enum/AppRotes';
+import { AppRoutes } from 'enum/AppRoutes';
 
 const Header = () => {
   const navigate = useNavigate();
