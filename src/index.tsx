@@ -5,12 +5,13 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from 'routes/AppRouter';
 import { store } from 'store/store';
+import Loader from 'components/Loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <Provider store={store}>
     <BrowserRouter>
-      <Suspense fallback={'Loading...'}>
+      <Suspense fallback={<Loader />}>
         <AppRouter />
       </Suspense>
     </BrowserRouter>

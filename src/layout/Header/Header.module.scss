@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.button {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #faf0cd, #fab397);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+}

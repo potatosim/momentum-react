@@ -1,4 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { getCityFromLocalStorage, saveCityToLocalStorage } from 'helpers/localStorage';
 import { getWeather } from 'thunks';
 
 interface WeatherInitial {
@@ -13,7 +14,7 @@ interface WeatherInitial {
 }
 
 const initialState: WeatherInitial = {
-  city: 'Минск',
+  city: getCityFromLocalStorage() || 'Минск',
   description: '',
   temperature: 0,
   windSpeed: 0,
@@ -29,6 +30,7 @@ const weatherSlice = createSlice({
   reducers: {
     setCityValue: (state, { payload }: PayloadAction<string>) => {
       state.city = payload;
+      saveCityToLocalStorage(payload);
     },
   },
   extraReducers: (builder) => {

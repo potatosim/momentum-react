@@ -1,6 +1,7 @@
 import { AppRoutes } from 'enum/AppRotes';
 import Layout from 'layout/Layout';
 import MainPage from 'pages/MainPage';
+import ToDoPage from 'pages/ToDoPage';
 import WeatherPage from 'pages/WeatherPage';
 import { Route, Routes } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ const AppRouter = () => {
       >
         <Route index element={<MainPage />}></Route>
         <Route path={AppRoutes.Weather} element={<WeatherPage />}></Route>
+        <Route path={AppRoutes.ToDo} element={<ToDoPage />}></Route>
       </Route>
     </Routes>
   );
