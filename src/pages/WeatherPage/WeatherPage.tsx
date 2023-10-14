@@ -3,8 +3,8 @@ import { setCityValue } from 'handlers/weatherSlice';
 import { useAppDispatch, useAppSelector } from 'hooks/reduxHooks';
 import { ChangeEvent, useEffect } from 'react';
 import { getWeather } from 'thunks';
-import classes from './WeatherPage.module.scss';
 import Loader from 'components/Loader';
+import classes from './WeatherPage.module.scss';
 
 const WeatherPage = () => {
   const { city, description, humidity, icon, temperature, windSpeed, isError, isLoading } =
@@ -35,7 +35,7 @@ const WeatherPage = () => {
       />
 
       {isError ? (
-        <div className={classes.text}>Ошибка! Такой город не найден.</div>
+        <div className={classes.text}>Error! Please, try another city.</div>
       ) : (
         <>
           <div className={classes.iconWrapper}>
@@ -43,8 +43,8 @@ const WeatherPage = () => {
             <div className={classes.text}>{Math.ceil(temperature)} °C</div>
           </div>
           <div className={classes.text}>{description}</div>
-          <div className={classes.text}>влажность: {humidity}%</div>
-          <div className={classes.text}>скорость ветра: {windSpeed} м/с</div>{' '}
+          <div className={classes.text}>humidity: {humidity}%</div>
+          <div className={classes.text}>wind speed: {windSpeed} m/s</div>{' '}
         </>
       )}
     </div>

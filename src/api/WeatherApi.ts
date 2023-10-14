@@ -29,7 +29,7 @@ export default class WeatherApi {
           q: city,
           appid: process.env.REACT_APP_WEATHER_API_KEY,
           units: 'metric',
-          lang: 'ru',
+          lang: 'en',
         },
       },
     );

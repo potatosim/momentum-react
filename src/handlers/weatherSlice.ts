@@ -15,7 +15,7 @@ interface WeatherInitial {
 }
 
 const initialState: WeatherInitial = {
-  city: getValueFromLocalStorage(LocalStorageKeys.City) || 'Минск',
+  city: getValueFromLocalStorage(LocalStorageKeys.City) || 'Minsk',
   description: '',
   temperature: 0,
   windSpeed: 0,

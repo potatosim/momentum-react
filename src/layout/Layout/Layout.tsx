@@ -1,4 +1,3 @@
-import classes from './Layout.module.scss';
 import Main from 'layout/Main';
 import Header from 'layout/Header';
 import { Outlet } from 'react-router-dom';
@@ -6,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'hooks/reduxHooks';
 import { getImageSelector } from 'handlers/selectors';
 import { getImage } from 'thunks';
+import classes from './Layout.module.scss';
 
 const Layout = () => {
   const [src, setSrc] = useState('');

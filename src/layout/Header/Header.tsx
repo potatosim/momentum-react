@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import classes from './Header.module.scss';
 import { AppRoutes } from 'enum/AppRoutes';
 import { useAppDispatch, useAppSelector } from 'hooks/reduxHooks';
 import { getImageSelector } from 'handlers/selectors';
 import { setImageTag } from 'handlers/imageSlice';
 import { ChangeEvent } from 'react';
 import { getImage } from 'thunks';
+import classes from './Header.module.scss';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Header = () => {
       <input
         value={tag}
         className={classes.inputTags}
-        placeholder="Введите тег для выбора фона"
+        placeholder="Enter the tag for background"
         onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setImageTag(e.target.value))}
         onKeyDown={(event) => {
           if (event.key === 'Enter') {

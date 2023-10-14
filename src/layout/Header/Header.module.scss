@@ -1,8 +1,9 @@
+@import 'styles/variables';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
 }
 
@@ -15,7 +16,7 @@
   border: none;
   outline: none;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #faf0cd, #fab397);
+  background: linear-gradient(90deg, $yellowColor, $peachColor);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
@@ -33,15 +34,12 @@
   width: 60%;
   border-radius: 10px;
   background-color: transparent;
-  font-style: italic;
-
   font-size: 1.5rem;
-  color: #fab397;
+  color: $peachColor;
 
   &::placeholder {
     color: rgb(250, 179, 151, 0.5);
     font-weight: 400;
-    font-style: italic;
     font-size: 1.5rem;
   }
 }

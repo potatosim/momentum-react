@@ -1,3 +1,5 @@
+@import 'styles/variables';
+
 img {
   width: 100%;
 }
@@ -8,7 +10,6 @@ img {
   row-gap: 2rem;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 5%;
 }
@@ -16,7 +17,7 @@ img {
 .notFoundText {
   font-size: 2rem;
   font-weight: 500;
-  color: white;
+  color: $whiteColor;
 }
 
 .imageWrapper {
@@ -31,6 +32,6 @@ img {
   display: inline-block;
   border-radius: 10px;
   transition: 0.25s all ease-in-out;
-  background-color: #eef6b0;
+  background-color: $yellowColor;
   cursor: pointer;
 }

@@ -9,5 +9,3 @@ export const getValueFromLocalStorage = (key: LocalStorageKeys) => {
 
   return valueFromStorage;
 };
-
-export const saveTagToLocalStorage = () => {};

@@ -1,0 +1,55 @@
+@import 'styles/variables';
+
+.dateWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 5%;
+  min-width: 600px;
+  min-height: 500px;
+}
+
+.time {
+  font-size: 100px;
+  font-weight: 600;
+  transition: opacity 0.5s ease-in-out;
+  color: $whiteColor;
+  padding: 15px;
+}
+
+.date {
+  font-size: 40px;
+  color: $whiteColor;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.greeting {
+  font-size: 40px;
+  color: $whiteColor;
+}
+
+.greetingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  flex: 1;
+  max-width: 50%;
+  padding: 10px;
+  font-size: 40px;
+  text-align: left;
+  color: $whiteColor;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.name::placeholder {
+  color: $whiteColor;
+  opacity: 0.6;
+}
