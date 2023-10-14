@@ -33,7 +33,6 @@ export default class WeatherApi {
         },
       },
     );
-
     return {
       description: data.weather[0].description,
       temperature: data.main.temp,

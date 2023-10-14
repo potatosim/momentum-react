@@ -1,11 +1,13 @@
-const CITY_KEY = 'city';
+import { LocalStorageKeys } from 'enum/LocalStorageKeys';
 
-export const saveCityToLocalStorage = (city: string) => {
-  localStorage.setItem(CITY_KEY, city);
+export const saveValueToLocalStorage = (key: LocalStorageKeys, value: string) => {
+  localStorage.setItem(key, value);
 };
 
-export const getCityFromLocalStorage = () => {
-  const city = localStorage.getItem(CITY_KEY);
+export const getValueFromLocalStorage = (key: LocalStorageKeys) => {
+  const valueFromStorage = localStorage.getItem(key);
 
-  return city;
+  return valueFromStorage;
 };
+
+export const saveTagToLocalStorage = () => {};
