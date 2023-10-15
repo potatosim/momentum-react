@@ -1,0 +1,43 @@
+@import 'styles/media';
+@import 'styles/variables';
+
+@mixin button {
+  position: absolute;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  transition: $defaultTransition;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+
+  @include tablet {
+    width: 40px;
+    height: 45px;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonNext {
+  @include button;
+  background: no-repeat url('../../static/next-image.svg');
+  right: 0;
+  top: 50%;
+}
+
+.buttonPrev {
+  @include button;
+  background: no-repeat url('../../static/prev-image.svg');
+  left: 0;
+  top: 50%;
+}

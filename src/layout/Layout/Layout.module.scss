@@ -1,0 +1,16 @@
+.layoutWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: center/cover, rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
