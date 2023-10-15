@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import weatherReducer from 'handlers/weatherSlice';
 import imageReducer from 'handlers/imageSlice';
+import toDoReducer from 'handlers/toDoSlice';
 
 const rootReducer = combineReducers({
   weather: weatherReducer,
   image: imageReducer,
+  toDo: toDoReducer,
 });
 
 export const store = configureStore({

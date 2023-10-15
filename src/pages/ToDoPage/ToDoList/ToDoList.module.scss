@@ -1,0 +1,17 @@
+@import 'styles/variables';
+
+.todoList {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.addText {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, $yellowColor, $peachColor);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

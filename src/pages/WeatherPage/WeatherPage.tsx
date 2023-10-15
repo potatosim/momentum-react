@@ -39,7 +39,7 @@ const WeatherPage = () => {
       ) : (
         <>
           <div className={classes.iconWrapper}>
-            <i className={`${classes.icon} owf owf-${icon}`}></i>
+            <i className={`${classes.icon} owf owf-${icon}`} />
             <div className={classes.text}>{Math.ceil(temperature)} °C</div>
           </div>
           <div className={classes.text}>{description}</div>
