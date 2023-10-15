@@ -24,6 +24,7 @@ const WeatherPage = () => {
   return (
     <div className={classes.weatherWrapper}>
       <input
+        placeholder="[Enter the city]"
         className={classes.input}
         value={city}
         onChange={(e: ChangeEvent<HTMLInputElement>) => dispatch(setCityValue(e.target.value))}
@@ -44,7 +45,7 @@ const WeatherPage = () => {
           </div>
           <div className={classes.text}>{description}</div>
           <div className={classes.text}>humidity: {humidity}%</div>
-          <div className={classes.text}>wind speed: {windSpeed} m/s</div>{' '}
+          <div className={classes.text}>wind speed: {windSpeed.toFixed(1)} m/s</div>{' '}
         </>
       )}
     </div>

@@ -1,6 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
 import classes from './Main.module.scss';
-import { NextButton, PrevButton } from 'static';
 import { useAppDispatch } from 'hooks/reduxHooks';
 
 import { setImageFromStore } from 'handlers/imageSlice';
@@ -10,13 +9,10 @@ const Main: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <main className={classes.main}>
-      <button className={classes.button} onClick={() => dispatch(setImageFromStore())}>
-        <PrevButton />
-      </button>
+      <button className={classes.buttonPrev} onClick={() => dispatch(setImageFromStore())} />
+
       {children}
-      <button className={classes.button} onClick={() => dispatch(setImageFromStore())}>
-        <NextButton />
-      </button>
+      <button className={classes.buttonNext} onClick={() => dispatch(setImageFromStore())} />
     </main>
   );
 };

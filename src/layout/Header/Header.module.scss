@@ -1,15 +1,26 @@
 @import 'styles/variables';
+@import 'styles/media';
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  column-gap: 1rem;
+  padding: 1rem 2rem;
+
+  @include tablet {
+    padding: 1rem;
+    column-gap: 0.5rem;
+  }
 }
 
 .buttonWrapper {
   display: flex;
-  column-gap: 2rem;
+  column-gap: 1rem;
+
+  @include tablet {
+    column-gap: 0.5rem;
+  }
 }
 
 .button {
@@ -21,16 +32,20 @@
   -webkit-text-fill-color: transparent;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: $defaultTransition;
 
   &:hover {
     transform: scale(0.8);
+  }
+
+  @include tablet {
+    font-size: 1rem;
   }
 }
 
 .inputTags {
   outline: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   width: 60%;
   border-radius: 10px;
   background-color: transparent;
@@ -41,5 +56,13 @@
     color: rgb(250, 179, 151, 0.5);
     font-weight: 400;
     font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 1rem;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
   }
 }

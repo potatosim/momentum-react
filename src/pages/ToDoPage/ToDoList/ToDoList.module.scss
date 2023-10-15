@@ -1,10 +1,27 @@
 @import 'styles/variables';
+@import 'styles/media';
 
 .todoList {
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
+  padding-right: 1rem;
+  max-height: 25rem;
+  overflow-y: scroll;
+  transition: $defaultTransition;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: $peachColor;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    margin: 0 auto;
+    background-color: $whiteColor;
+    border-radius: 2px;
+  }
 }
 
 .addText {
@@ -14,4 +31,8 @@
   background: linear-gradient(90deg, $yellowColor, $peachColor);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @include tablet {
+    font-size: 1rem;
+  }
 }

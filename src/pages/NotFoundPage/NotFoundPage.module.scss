@@ -1,4 +1,5 @@
 @import 'styles/variables';
+@import 'styles/media';
 
 img {
   width: 100%;
@@ -18,6 +19,11 @@ img {
   font-size: 2rem;
   font-weight: 500;
   color: $whiteColor;
+  text-align: center;
+
+  @include tablet {
+    font-size: 1.5rem;
+  }
 }
 
 .imageWrapper {
@@ -31,7 +37,12 @@ img {
   text-align: center;
   display: inline-block;
   border-radius: 10px;
-  transition: 0.25s all ease-in-out;
+  transition: $defaultTransition;
   background-color: $yellowColor;
   cursor: pointer;
+
+  @include tablet {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }

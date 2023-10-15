@@ -38,13 +38,15 @@ const MainPage = () => {
 
   return (
     <div className={classes.dateWrapper}>
-      <time ref={timeRef} className={classes.time} />
+      <time ref={timeRef} className={classes.time}>
+        {new Date().toLocaleTimeString()}
+      </time>
       <div className={classes.date}>{date}</div>
       <div className={classes.greetingContainer}>
         <span className={classes.greeting}>Good {timesOfDay},</span>
         <input
           className={classes.name}
-          placeholder="Enter your name"
+          placeholder="[Enter your name]"
           value={name}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
         />

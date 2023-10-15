@@ -10,7 +10,6 @@ interface ImageInitial {
   background: string;
   images: ImageItem[];
   isLoading: boolean;
-  isError: boolean;
 }
 
 const initialState: ImageInitial = {
@@ -18,7 +17,6 @@ const initialState: ImageInitial = {
   background: '',
   images: [],
   isLoading: false,
-  isError: false,
 };
 
 const imageSlice = createSlice({
@@ -41,11 +39,9 @@ const imageSlice = createSlice({
       .addCase(getImage.fulfilled, (state, { payload: { photo, allImages } }) => {
         state.background = photo;
         state.isLoading = false;
-        state.isError = false;
         state.images = allImages;
       })
       .addCase(getImage.rejected, (state) => {
-        state.isError = true;
         state.isLoading = false;
       });
   },
